@@ -1,0 +1,152 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0; /* 初期状態で透明に */
+  animation: fadeIn 1s forwards; /* アニメーションを適用 */
+}
+
+body {
+  background: linear-gradient(to right, #fff5c3, #2afadf);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+
+main {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border: 4px solid #fff;
+  border-radius: 12px;
+  margin: 16px auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.panel img {
+  width: 100px;
+  height: 120px;
+  margin-bottom: 4px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.panel img:hover {
+  transform: scale(1.1);
+}
+
+.stop {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  background: linear-gradient(to bottom, #ef454a, #d1483e);
+  box-shadow: 0 4px 0 #b23c35;
+  border-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  user-select: none;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.stop:hover {
+  background: linear-gradient(to bottom, #d1483e, #ef454a);
+  box-shadow: 0 4px 0 #d1483e;
+}
+
+#spin {
+  cursor: pointer;
+  width: 300px;
+  height: 50px;
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+  box-shadow: 0 4px 0 #1f6391;
+  border-radius: 25px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  margin: 20px auto;
+  font-size: 18px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+#spin:hover {
+  background: linear-gradient(to bottom, #2980b9, #3498db);
+  box-shadow: 0 4px 0 #2880b9;
+}
+
+.unmatched {
+  opacity: 0.5;
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
+@keyframes fireworks {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.celebrate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 48px;
+  z-index: 1000;
+  animation: fadein 1s forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fireworks {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 10%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  border-radius: 50%;
+  animation: fireworks 1s ease-out infinite;
+}
